@@ -1,0 +1,19 @@
+{
+  "name": "angular-d2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "angular": "1.4.3",
+    "d2": "0.0.7",
+    "http-server": "0.8.0",
+    "jquery": "2.1.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node node_modules/http-server/bin/http-server -p 9000 && open http://localhost:9000"
+  },
+  "author": "",
+  "license": "ISC"
+}
