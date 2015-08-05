@@ -20,6 +20,7 @@ npm install
 ### To install the app into your instance download the following zip file and install using the DHIS2 App manager
 
 Note the code assumes that your api is located at `/dhis/api` if this is not the case please adjust the `baseUrl` config in the `app.js` file.
+https://github.com/Markionium/d2-sample-app-with-angular/blob/master/app.js#L8
 
 After that zip the whole folder up and install it.
 
