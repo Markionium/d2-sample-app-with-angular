@@ -1,32 +1,11 @@
 (function () {
 /**
- * If you're not running the app on the same port as the dhis2 server you will 
- * need to provide the authentication headers with each request. In this example
- * i added this because it is running against the demo environment.
- * DHIS2 since 2.17 (i believe) supports cross domain access through a whitelist of domains.
- * If the example does not run it might be because the domain is removed from the whitelist
- * on the following url https://apps.dhis2.org/dev/dhis-web-maintenance-settings/systemAccessSettings.action
- * the CORS whitelist should have http://localhost:9000 and/or http://0.0.0.0:9000
- */
-
-//TODO: Replace these with your own username and password
-//Obviously do not use this for production this is for demonstration purposes only.
-//Since you're probably creating an app with a manifest.webapp you won't need this jquery setup part
-var username = 'admin';
-var password = 'District1';
-
-jQuery.ajaxSetup({
-    headers: {
-        "Authorization": 'Basic ' + btoa([username, password].join(':'))
-    }
-});
-
-/**
- * Now for D2 we need to point it to which api it should use, this is done through the configuration
- * object. In this example it points to the demo instance.
+ * For D2 we need to point it to which api it should use, this is done through the configuration
+ * object. In this example it points to the local instance. (It could be cross domain but this requires more
+ * configuration) For installable apps this should be sufficient.
  */
 var d2Config = {
-    baseUrl: 'http://localhost:8080/dhis/api' //Base url of the DHIS2 api 
+    baseUrl: '/dhis/api' //Base url of the DHIS2 api 
 };
 
 //We then call the d2 function to initialize the library. It will load the /api/schemas endpoint to calibrate itself

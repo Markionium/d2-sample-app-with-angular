@@ -2,22 +2,15 @@
 
 ### Getting started
 
-#### Step 1: Clone the project
+### To check out just the code clone the repo and install the dependencies
 ```sh
 git clone https://github.com/Markionium/d2-sample-app-with-angular.git
-```
 
-#### Step 2: Move into project dir
-```sh
-cd d2-sample-app-with-angular
-```
-
-#### Step 3: Install dependencies
-```sh
 npm install
 ```
 
-#### Step 4: Run the project
-```sh
-npm start
-```
+### To install the app into your instance download the following zip file and install using the DHIS2 App manager
+
+Note the code assumes that your api is located at `/dhis/api` if this is not the case please adjust the `baseUrl` config in the `app.js` file.
+
+After that zip the whole folder up and install it.
